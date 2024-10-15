@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1668587560
+CRC: 791288980
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 32ae7fc91148d28838ab9acbc43e51b0
+    Hash: e2b5200c840765078fd00e014fafd44d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 16c8aa2ea7eeb9c3aebb6cebe2273284
+    Hash: 48f9e47804cc6149eb45c38c55466448
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 32ae7fc91148d28838ab9acbc43e51b0
+    Hash: e2b5200c840765078fd00e014fafd44d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,12 +24,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Resources/Prefab/TestCube.prefab
 - Assets/Resources/Prefab/TestAsset.prefab
-Dependencies: []
+Dependencies:
+- F:/UnityProjects/HotFresh/Demo1/Demo_1/AssetBundles/PC/materials

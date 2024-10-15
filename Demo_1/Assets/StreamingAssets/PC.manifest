@@ -1,10 +1,14 @@
 ManifestFileVersion: 0
-CRC: 4051380744
+CRC: 1521110623
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: model
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: materials
     Info_1:
       Name: img
+      Dependencies: {}
+    Info_2:
+      Name: materials
       Dependencies: {}
