@@ -51,5 +51,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Demo_1.sln"
+    "dotnet.defaultSolution": "Demo_1.sln",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#451826",
+        "titleBar.activeBackground": "#602135",
+        "titleBar.activeForeground": "#FEFBFC"
+    }
 }

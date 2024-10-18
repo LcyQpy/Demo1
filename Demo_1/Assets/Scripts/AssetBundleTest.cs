@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class AssetBundleTest : MonoBehaviour
 {
-    public Image img;
-    public GameObject obj;
-    // Start is called before the first frame update
+    public GameObject img;
     void Start()
     {
         // // 加载AB包 AB包不能重复加载
@@ -31,27 +29,22 @@ public class AssetBundleTest : MonoBehaviour
         //     Debug.Log(i);
         //     AssetBundle.LoadFromFileAsync(Application.streamingAssetsPath + "/" + i);
         // }
-        GameObject obj = ABManager.GetInstance().LoadRes("model", "TestAsset") as GameObject;
-        img.sprite = ABManager.GetInstance().LoadRes<Sprite>("Img", "test");
-        Instantiate(obj);
-    }
-    IEnumerator LoadABasset(string ABname, string Assetname){
+        
         // 加载AB包
-        AssetBundleCreateRequest asset = AssetBundle.LoadFromFileAsync(Application.streamingAssetsPath + "/" + ABname);
-        yield return asset;
-        // 加载资源
-        AssetBundleRequest sp1 = asset.assetBundle.LoadAssetAsync<Sprite>(Assetname);
-        yield return sp1;
-        img.sprite = sp1.asset as Sprite;
-    }
+        // AssetBundle imgAB = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/" + "img");    // 全路径名
+        // img.GetComponent<Image>().sprite = imgAB.LoadAsset<Sprite>("test");
 
+        // 使用ABMgr加载需要的资源
+        Sprite sp1= ABManager.GetInstance().LoadRes<Sprite>("img", "test");
+        img.GetComponent<Image>().sprite = sp1;
+    }
     // Update is called once per frame
     void Update()
     {  
         if(Input.GetKeyDown(KeyCode.Space)){
             //AssetBundle.UnloadAllAssetBundles(true);
             ABManager.GetInstance().ClearAB(true);
-            ABManager.GetInstance().UnLoad("model", true);
+            //ABManager.GetInstance().UnLoad("model", true);
         }
     }
 }
